@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Digital-Health-Record-Management-System-for-Migrant-Workers-in-Kerala.iml" filepath="$PROJECT_DIR$/Digital-Health-Record-Management-System-for-Migrant-Workers-in-Kerala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back-end-service/back-end-service.iml" filepath="$PROJECT_DIR$/back-end-service/back-end-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/front-end-service/front-end-service.iml" filepath="$PROJECT_DIR$/front-end-service/front-end-service.iml" />
+    </modules>
+  </component>
+</project>
