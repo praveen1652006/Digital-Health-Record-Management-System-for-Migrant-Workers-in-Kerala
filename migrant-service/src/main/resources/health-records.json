@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "health-records-473718",
+  "private_key_id": "0f5e3ea731c3afba83523591fbbb07f73100b882",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDVhvFDokfd0f/a\naGbmt68ZN5WZw7pScouD3iCaQvgDedBLKciDHGcfUqeOck02bkq5eq1M0tYDPAGg\nX9kgCW+1KpaRiqPj4fACJwwrtzeYFuhEPqZMPLC004Rwo3ZpunjS3ePPlLN3PFuW\nXmJOaqR8nzEF0spnCJlHJ1gcsuUugRqe/cJXzEdnqyVR/mTsiUO57UlpoU9ROyO4\nu/gHT3eF8VIlE/rYQ+tMan3wy/YBQoBs5Nz3X0G3hJjw5tf06gwneXm7/Aq37jVj\nukHasTjqltYQrhDHYXUqfM+gtmQlS5wT2KXGJXvxcw+/2lrL/pj2DnWHopnV098i\nuXOHpbvnAgMBAAECggEAAn9SCg73VTZUDjtjXLZwQ1S9mK9L2hQB4rhx3CwFV5EQ\nqRhjgnkOEbU3RXi7w3O1xwaSyU+79gy5HiWQ1gmWN2G4ohojgZJOatAHGenKKiq2\na7np2wFotay1o1WeGG14ZUr4E6DzGmVn0tHmx3EC3HxGKAHHoT3eARGKO8ex24Hc\nkWJl/os/ER26gI1KCV3DKDXc7AYmnS9l4c5dXFLmXyaCijBZcUO2/MAOCUfdkvty\nQDh9D7sVniBKccNBU0XttsjFmw2cSJPe+QIbdENLf7mfMnrcqM7RmeI6u2FEHnym\nocQsOMtO+BTeqBHBRCFg5vzQnf8x7W1u7r36SEoJjQKBgQD5U5qgrz9SY/wZC1OS\nV0jUTDYmqMIZR9DPcyH5CQ9nJU9RfHeL1azGeYj8g2u4r2R7FFkpba5UswTmvU6k\nPwtLVVLJRgm3oiRD1KTbwPbe2ZBIaXQZvIzwHiwMtvaLw7WBTLOrIvuIlhQSgit6\nHtVW4bI2PI3u725bR1JWBvMkHQKBgQDbPgn/cbJTlAivABlXn9bjVKjlq/k3QrCc\nWDjq5BzDYIFgHLVFjs/WWUvIycF6UrIGIAWtyW8DqIQubSPyEqIjnAzXmHEgbGgR\nqXEXKAGSAJ61so/rdow+Ai99vdS4O+w7tAFp3ZnqNYR7rMNOQxKJQ2E41+sclMiW\nqyv92hlY0wKBgQCN4UOG2PMhwX/+CHIAPudU2CGgkjwSAsoSoyPcAYngWlzus/Ob\ngXaWYybO+0JbkIOPfp7WcnHYBR9u5p9P3AhjUCSSIOb6tqwIZYODAiX53ri6XDgT\nRTa2lZTfj2ZxVmd9MtazNm8I5M57UdPH5K/mhvzQ3FiwdVPJYaa7Ca1nCQKBgQCW\nkc/p+FrBXaxtC4NcE3FQZSctvOMGWa3TYh+M6ib6439W08CGyeLhUihi+HUBHmQX\nIszjorC0cXp+LASAzt092YFUW+RtoSYD4zvA7H/Pls9o9/4xdxQvze5xy/qYoMbH\n5gMGguOe3yxih68GQ7gqPvU5Rci5s1DjcSFgUPYRcwKBgFIOeZu553Fr4KFDOCwR\nLYdCMeo0Bx/24GR/n0v7Hawn8kPMH2MLF+JNUUpjkLloqUcj7u30ysvqjEC4zOEl\n83IqG3uoxJFun1DRIPV75zYBtJvbYxuI/WDRce7eSJ+hdLUWTyyuEfhIhYF2J45s\nwqUo06XcuicExoEbK/wwhxBy\n-----END PRIVATE KEY-----\n",
+  "client_email": "spring-health-record@health-records-473718.iam.gserviceaccount.com",
+  "client_id": "100888329615405084774",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spring-health-record%40health-records-473718.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
