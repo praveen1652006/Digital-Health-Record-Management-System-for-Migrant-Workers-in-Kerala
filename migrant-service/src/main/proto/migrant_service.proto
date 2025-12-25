@@ -1,0 +1,106 @@
+syntax="proto3";
+
+package migrant;
+
+option java_multiple_files=true;
+option java_package="com.sih.backendservice.grpc";
+
+service MigrantService{
+  rpc GetMigrantById(MigrantIdRequest) returns(MigrantResponse);
+}
+
+message MigrantIdRequest{
+  string migrantId=1;
+}
+
+message MigrantResponse{
+  bool exists=1;
+  string migrantId=2;
+  string name=3;
+}
+
+
+
+
+//    @Service
+//    public class TreatmentPlanService {
+//
+//@Autowired
+//    private TreatmentPlanRepository treatmentPlanRepository;
+//
+//    @Autowired
+//    private MigrantServiceGrpc.MigrantServiceBlockingStub migrantStub;
+//
+//    public TreatmentPlanResponse createTreatmentPlan(UUID migrantId, TreatmentPlanRequest dto) {
+//// Step 1: Verify migrant via gRPC
+//    MigrantIdRequest request = MigrantIdRequest.newBuilder()
+//    .setMigrantId(migrantId.toString())
+//    .build();
+//
+//    MigrantResponse migrantResponse = migrantStub.getMigrantById(request);
+//
+//    if (!migrantResponse.getExists()) {
+//throw new RuntimeException("Migrant not found for ID: " + migrantId);
+//    }
+//
+//// Step 2: Create and persist Treatment Plan
+//    TreatmentPlan plan = new TreatmentPlan();
+//    plan.setMigrantHealthId(migrantId);
+//    plan.setDiseaseCode(dto.getDiseaseCode());
+//    plan.setStartDate(dto.getStartDate());
+//    plan.setEndDate(dto.getEndDate());
+//    plan.setFrequencyInDays(dto.getFrequencyInDays());
+//    plan.setStatus(TreatmentStatus.ACTIVE);
+//
+//    TreatmentPlan saved = treatmentPlanRepository.save(plan);
+//
+//// Step 3: Return response
+//    return TreatmentMapper.toTreatmentPlanResponse(saved);
+//    }
+//    }
+
+
+//->->->-> server GRPC Code
+//    @Override
+//    public void getMigrantById(MigrantIdRequest request,
+//    StreamObserver<MigrantResponse> responseObserver) {
+//
+//try {
+//if (request.getMigrantId() == null || request.getMigrantId().isEmpty()) {
+//responseObserver.onError(Status.INVALID_ARGUMENT
+//    .withDescription("Migrant ID is required")
+//    .asRuntimeException());
+//    return;
+//    }
+//
+//UUID migrantHealthId = UUID.fromString(request.getMigrantId());
+//    Optional<Migrant> migrantOpt = migrantRepository.findByMigrantHealthId(migrantHealthId);
+//
+//    MigrantResponse.Builder responseBuilder = MigrantResponse.newBuilder()
+//    .setMigrantId(migrantHealthId.toString());
+//
+//    if (migrantOpt.isEmpty()) {
+//responseBuilder.setExists(false);
+//    } else {
+//Migrant migrant = migrantOpt.get();
+//    responseBuilder
+//.setExists(true)
+//    .setName(migrant.getName());
+//    }
+//
+//responseObserver.onNext(responseBuilder.build());
+//    responseObserver.onCompleted();
+//
+//    } catch (IllegalArgumentException ex) {
+//// Invalid UUID format
+//    responseObserver.onError(Status.INVALID_ARGUMENT
+//    .withDescription("Invalid migrant ID format")
+//    .asRuntimeException());
+//    } catch (Exception ex) {
+//responseObserver.onError(Status.INTERNAL
+//    .withDescription("Unexpected server error")
+//    .augmentDescription(ex.getMessage())
+//    .asRuntimeException());
+//    }
+//    }
+
