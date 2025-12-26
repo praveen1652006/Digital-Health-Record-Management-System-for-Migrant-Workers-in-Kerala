@@ -75,8 +75,14 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .build();
     }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     public boolean validateToken(String authHeader) {
         return jwtService.validateToken(authHeader.substring(7));
     }
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }

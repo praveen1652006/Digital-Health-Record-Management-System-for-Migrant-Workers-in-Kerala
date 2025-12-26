@@ -1,11 +1,6 @@
 package com.pc.eliminationservice.controller;
 
-<<<<<<< Updated upstream
-public class TreatmentPlanController {
-=======
-import com.pc.eliminationservice.dto.request.TreatmentPlanRequest;
-import com.pc.eliminationservice.dto.response.TreatmentPlanResponse;
-import com.pc.eliminationservice.model.TreatmentPlan;
+
 import com.pc.eliminationservice.service.TreatmentPlanService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -33,5 +28,4 @@ public class TreatmentPlanController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(treatmentPlanService.getAllTreatmentPlanById(migrantHealthId));
     }
->>>>>>> Stashed changes
 }
