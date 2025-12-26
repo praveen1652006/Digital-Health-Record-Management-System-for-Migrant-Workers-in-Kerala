@@ -9,11 +9,12 @@ import com.pc.eliminationservice.model.TreatmentPlan;
 import com.pc.eliminationservice.model.enums.TreatmentStatus;
 import com.pc.eliminationservice.repository.TreatmentPlanRepository;
 import com.pc.eliminationservice.service.TreatmentPlanService;
-import com.sih.backendService.grpc.MigrantResponse;
+import com.sih.backendservice.grpc.MigrantResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -50,5 +51,14 @@ public class TreatmentPlanServiceImpl implements TreatmentPlanService {
         TreatmentPlan savedTreatmentPlan=treatmentPlanRepository.save(treatmentPlan);
 
         return TreatmentMapper.toResponse(savedTreatmentPlan);
+    }
+
+    @Override
+    public List<TreatmentPlanResponse> getAllTreatmentPlanById(UUID migrantHealthId) {
+        MigrantResponse response=eliminationServiceGrpcClient.getPatientById(migrantHealthId);
+        if(!response.getExists()){
+            throw new MigrantNotFoundException("Migrant with the healthId Not found: "+ migrantHealthId);
+        }
+        return treatmentPlanRepository.findAll().stream().map(TreatmentMapper::toResponse).toList();
     }
 }

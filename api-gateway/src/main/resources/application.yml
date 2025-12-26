@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: auth-service-route
+              uri: http://localhost:8080
+              predicates:
+                - Path=/auth/**
+              filters:
+                - RewritePath=/auth(?<segment>/?.*),/api/v1/auth${segment}
+
+            - id: migrant-service-route
+              uri: http://localhost:8081
+              predicates:
+                - Path=/migrant/**
+              filters:
+                - RewritePath=/migrant(?<segment>?.*),/api/v1/migrant${segment}
+                - JwtValidationFilterFactory
+
+            - id: elimination-service-route
+              uri: http://localhost:8082
+              predicates:
+                - Path=/
+
+
+auth:
+  service:
+    url: http://localhost:8080
+server:
+  port: 7000

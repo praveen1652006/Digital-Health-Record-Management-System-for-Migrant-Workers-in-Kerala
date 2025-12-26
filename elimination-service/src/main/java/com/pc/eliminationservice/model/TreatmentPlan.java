@@ -40,7 +40,6 @@ public class TreatmentPlan {
 
     private LocalDate endDate;
 
-
     @ElementCollection
     @CollectionTable(
             name = "treatment_plan_medications",
@@ -48,23 +47,9 @@ public class TreatmentPlan {
     )
     private List<Medication> medicationList;
 
-    private LocalTime reminderTime;
-
-    @Column(name = "next-action_due")
-    private LocalDateTime nextActionDue; // IMP
-
     @Enumerated(EnumType.STRING)
     private TreatmentStatus status;
 
-    private Integer frequencyInDays; // IMP
-
-
-    // communication Settings for flexibility
-    private String preferredChannel;
-
-    private String preferredLanguage;
-
-    private Integer reminderRetryCount=0; // IMP
 
     @CreatedDate
     private LocalDateTime createdAt;
@@ -72,9 +57,28 @@ public class TreatmentPlan {
     @LastModifiedDate
     private LocalDate updatedAt;
 
+    @OneToMany(mappedBy = "treatmentPlan", cascade = CascadeType.ALL)
+    private List<ScheduleRule> scheduleRule;
+
+
     @JsonManagedReference
     @OneToMany(mappedBy = "treatmentPlan"
     ,cascade = CascadeType.ALL,
     orphanRemoval = true)
     private List<TreatmentLog> treatmentLogs=new ArrayList<>();
 }
+
+// from 9:00 AM onwards it begins to call the patient
+//    private LocalTime reminderTime;
+
+//    @Column(name = "next-action_due")
+//    private LocalDateTime nextActionDue; // IMP
+//    private Integer frequencyInDays; // IMP
+
+
+//    // communication Settings for flexibility
+//    private String preferredChannel;
+//
+//    private String preferredLanguage;
+//
+//    private Integer reminderRetryCount=0; // IMP

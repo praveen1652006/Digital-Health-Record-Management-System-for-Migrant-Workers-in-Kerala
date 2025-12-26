@@ -11,5 +11,9 @@ import java.util.UUID;
 public interface MigrantRepository extends JpaRepository<Migrant,Integer> {
     Optional<Migrant> findByMigrantHealthId(UUID migrantHealthId);
 
+    Optional<Migrant> findByMobileNumber(String mobileNumber);
+
+    Optional<Migrant> findByAuthUserId(UUID authUserId);
+
     boolean existsByMigrantHealthId(UUID migrantHealthId);
 }

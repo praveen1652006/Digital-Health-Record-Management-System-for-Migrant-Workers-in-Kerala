@@ -1,8 +1,5 @@
 package com.sih.backendservice.grpc;
 
-import com.sih.backendService.grpc.MigrantIdRequest;
-import com.sih.backendService.grpc.MigrantResponse;
-import com.sih.backendService.grpc.MigrantServiceGrpc;
 import com.sih.backendservice.model.Migrant;
 import com.sih.backendservice.repository.MigrantRepository;
 import io.grpc.Status;

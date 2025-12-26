@@ -1,8 +1,9 @@
 package com.pc.eliminationservice.grpc;
 
-import com.sih.backendService.grpc.MigrantIdRequest;
-import com.sih.backendService.grpc.MigrantResponse;
-import com.sih.backendService.grpc.MigrantServiceGrpc;
+
+import com.sih.backendservice.grpc.MigrantIdRequest;
+import com.sih.backendservice.grpc.MigrantResponse;
+import com.sih.backendservice.grpc.MigrantServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -34,7 +35,7 @@ public class EliminationServiceGrpcClient {
 
     public MigrantResponse getPatientById(UUID migrantHealthId){
         log.info("request came to client processing before sending to server");
-        MigrantIdRequest request=MigrantIdRequest.newBuilder()
+        MigrantIdRequest request= MigrantIdRequest.newBuilder()
                 .setMigrantId(migrantHealthId.toString())
                 .build();
         MigrantResponse response=blockingStub.getMigrantById(request);

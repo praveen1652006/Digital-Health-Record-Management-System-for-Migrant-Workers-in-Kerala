@@ -17,10 +17,6 @@ public class TreatmentMapper {
         treatmentPlan.setStartDate(treatmentPlanRequest.getStartDate());
         treatmentPlan.setEndDate(treatmentPlanRequest.getEndDate());
         treatmentPlan.setMedicationList(treatmentPlanRequest.getMedicationList());
-        treatmentPlan.setReminderTime(treatmentPlanRequest.getReminderTime());
-        treatmentPlan.setFrequencyInDays(treatmentPlanRequest.getFrequencyInDays());
-        treatmentPlan.setPreferredChannel(treatmentPlanRequest.getPreferredChannel());
-        treatmentPlan.setPreferredLanguage(treatmentPlanRequest.getPreferredLanguage());
         treatmentPlan.setCreatedAt(LocalDateTime.now());
         // THE STATUS SHOULD BE SET BY THE SERVICE LAYER IF IT IS NOT YET STARTED OR ACTIVE
         return treatmentPlan;
@@ -33,12 +29,7 @@ public class TreatmentMapper {
                 .startDate(savedTreatmentPlan.getStartDate())
                 .endDate(savedTreatmentPlan.getEndDate())
                 .medicationList(savedTreatmentPlan.getMedicationList())
-                .reminderTime(savedTreatmentPlan.getReminderTime())
-                .nextActionDue(savedTreatmentPlan.getNextActionDue())
                 .status(savedTreatmentPlan.getStatus())
-                .frequencyInDays(savedTreatmentPlan.getFrequencyInDays())
-                .preferredChannel(savedTreatmentPlan.getPreferredChannel())
-                .preferredLanguage(savedTreatmentPlan.getPreferredLanguage())
                 .createdAt(savedTreatmentPlan.getCreatedAt())
                 .build();
     }

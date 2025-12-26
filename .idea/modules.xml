@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Digital-Health-Record-Management-System-for-Migrant-Workers-in-Kerala.iml" filepath="$PROJECT_DIR$/Digital-Health-Record-Management-System-for-Migrant-Workers-in-Kerala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migrant-service/migrant-service.iml" filepath="$PROJECT_DIR$/migrant-service/migrant-service.iml" />
     </modules>
   </component>
 </project>
