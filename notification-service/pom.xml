@@ -55,7 +55,10 @@
         </dependency>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 <!--        <dependency>-->
@@ -78,7 +81,14 @@
             <artifactId>lombok</artifactId>
             <scope>annotationProcessor</scope>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+>>>>>>> Stashed changes
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

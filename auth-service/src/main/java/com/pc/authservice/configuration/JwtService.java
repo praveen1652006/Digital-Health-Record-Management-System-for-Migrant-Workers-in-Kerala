@@ -2,8 +2,11 @@ package com.pc.authservice.configuration;
 
 import io.jsonwebtoken.Claims;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 import io.jsonwebtoken.Jwts;
@@ -11,7 +14,10 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import jakarta.validation.constraints.NotNull;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import lombok.extern.slf4j.Slf4j;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Value;
@@ -26,7 +32,10 @@ import java.util.Map;
 import java.util.function.Function;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @Slf4j
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 @Service
@@ -93,6 +102,7 @@ public class JwtService {
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public boolean validateToken(String token){
         try{
             Jwts.parser()
@@ -115,6 +125,8 @@ public class JwtService {
         return true;
     }
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     private boolean isTokenExpired(String token){
