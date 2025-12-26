@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="migrant-service" />
+        <module name="api-gateway" />
         <module name="elimination-service" />
         <module name="notification-service" />
       </profile>
@@ -22,13 +23,11 @@
         <module name="adherence-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="api-gateway" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="adherence-service" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="auth-service" options="-parameters" />
       <module name="elimination-service" options="-parameters" />
       <module name="migrant-service" options="-parameters" />

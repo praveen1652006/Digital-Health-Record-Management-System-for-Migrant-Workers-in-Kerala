@@ -15,7 +15,10 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-@Table(name = "users")
+@Table(name = "users", indexes = {
+        @Index(name = "idx_identifier", columnList = "identifier"),
+        @Index(name = "idx_mobile_number", columnList = "mobileNumber")
+})
 public class User implements UserDetails {
 
 

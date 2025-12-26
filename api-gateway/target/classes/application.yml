@@ -12,6 +12,21 @@ spring:
                 - Path=/auth/**
               filters:
                 - RewritePath=/auth(?<segment>/?.*),/api/v1/auth${segment}
+
+            - id: migrant-service-route
+              uri: http://localhost:8081
+              predicates:
+                - Path=/migrant/**
+              filters:
+                - RewritePath=/migrant(?<segment>/?.*),/api/v1/migrant${segment}
+                - JwtValidationFilterFactory
+
+#            - id: elimination-service-route
+#              uri: http://localhost:8082
+#              predicates:
+#                - Path=/
+
+
 auth:
   service:
     url: http://localhost:8080

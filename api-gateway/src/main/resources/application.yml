@@ -18,13 +18,13 @@ spring:
               predicates:
                 - Path=/migrant/**
               filters:
-                - RewritePath=/migrant(?<segment>?.*),/api/v1/migrant${segment}
+                - RewritePath=/migrant(?<segment>/?.*),/api/v1/migrant${segment}
                 - JwtValidationFilterFactory
 
-            - id: elimination-service-route
-              uri: http://localhost:8082
-              predicates:
-                - Path=/
+#            - id: elimination-service-route
+#              uri: http://localhost:8082
+#              predicates:
+#                - Path=/
 
 
 auth:
