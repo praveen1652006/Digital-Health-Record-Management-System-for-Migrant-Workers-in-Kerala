@@ -30,5 +30,49 @@ public class TreatmentPlan {
 
     private LocalDate endDate;
 
+<<<<<<< Updated upstream
 
+=======
+    @ElementCollection
+    @CollectionTable(
+            name = "treatment_plan_medications",
+            joinColumns = @JoinColumn(name = "plan_id")
+    )
+    private List<Medication> medicationList;
+
+    @Enumerated(EnumType.STRING)
+    private TreatmentStatus status;
+
+
+    @CreatedDate
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    private LocalDate updatedAt;
+
+    @OneToMany(mappedBy = "treatmentPlan", cascade = CascadeType.ALL)
+    private List<ScheduleRule> scheduleRule;
+
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "treatmentPlan"
+    ,cascade = CascadeType.ALL,
+    orphanRemoval = true)
+    private List<TreatmentLog> treatmentLogs=new ArrayList<>();
+>>>>>>> Stashed changes
 }
+
+// from 9:00 AM onwards it begins to call the patient
+//    private LocalTime reminderTime;
+
+//    @Column(name = "next-action_due")
+//    private LocalDateTime nextActionDue; // IMP
+//    private Integer frequencyInDays; // IMP
+
+
+//    // communication Settings for flexibility
+//    private String preferredChannel;
+//
+//    private String preferredLanguage;
+//
+//    private Integer reminderRetryCount=0; // IMP

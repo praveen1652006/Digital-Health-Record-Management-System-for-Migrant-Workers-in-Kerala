@@ -1,5 +1,6 @@
 package com.sih.backendservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -33,10 +34,22 @@ public class Migrant {
     @Column(name = "migrant_health_id", unique = true, nullable = false, updatable = false)
     private UUID migrantHealthId;
 
+    @Column(name = "auth_user_id", unique = true)
+    private UUID authUserId; // new microservice setup
+
     @NotBlank(message = "Aadhaar number cannot be blank")
     @Pattern(regexp = "^\\d{12}$", message = "Aadhaar number must be exactly 12 digits")
     @Column(name = "aadhaar_number", unique = true, nullable = false, length = 12)
     private String aadhaarNumber;
+
+    @Column(name = "registered_by_provider_id", nullable = false, updatable = false)
+    private UUID registeredByProviderId; // new -> just for logging
+
+    @NotBlank(message = "Mobile Number is required")
+    @Pattern(regexp = "^\\d{10}$", message = "Mobile number must be 10 Digits")
+    @Column(name = "mobile_number", unique = true, nullable = false)
+    @JsonIgnore
+    private String mobileNumber; // new
 
     private String name;
 

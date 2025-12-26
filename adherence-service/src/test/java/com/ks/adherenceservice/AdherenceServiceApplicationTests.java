@@ -1,10 +1,10 @@
-package com.mc.notificationservice;
+package com.ks.adherenceservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NotificationServiceApplicationTests {
+class AdherenceServiceApplicationTests {
 
     @Test
     void contextLoads() {
