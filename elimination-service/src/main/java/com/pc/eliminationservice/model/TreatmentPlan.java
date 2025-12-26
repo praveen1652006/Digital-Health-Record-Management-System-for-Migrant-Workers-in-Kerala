@@ -30,7 +30,6 @@ public class TreatmentPlan {
 
     private LocalDate endDate;
 
-
     @ElementCollection
     @CollectionTable(
             name = "treatment_plan_medications",
