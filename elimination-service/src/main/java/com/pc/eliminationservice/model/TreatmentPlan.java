@@ -30,9 +30,7 @@ public class TreatmentPlan {
 
     private LocalDate endDate;
 
-<<<<<<< Updated upstream
 
-=======
     @ElementCollection
     @CollectionTable(
             name = "treatment_plan_medications",

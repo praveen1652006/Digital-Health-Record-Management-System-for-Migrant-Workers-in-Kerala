@@ -26,7 +26,7 @@ public class MigrantController {
     // for now, we are returning the migrant alone, after implementing the security
     // we can generate a JwT token, and then we return it to the FE
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<MigrantResponseDto> registerMigrant(@RequestBody MigrantRequestDto migrant) throws JsonProcessingException {
         return ResponseEntity.status(HttpStatus.OK).body(migrantService.registerMigrant(migrant));
     }
@@ -43,9 +43,8 @@ public class MigrantController {
                 .contentType(MediaType.IMAGE_PNG)
                 .body(decompressedQrCode);
     }
-    @GetMapping
+    @GetMapping("/all")
     public List<Migrant> getMigrants(){
         return migrantRepository.findAll();
     }
-
 }
